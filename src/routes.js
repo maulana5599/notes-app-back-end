@@ -2,6 +2,16 @@ const { addNoteHandler, getAllNotesHandler, getNoteByIdHandler, editNoteByIdHand
 
 const routes = [
   {
+    method: 'GET',
+    path: '/',
+    handler: (request, h) => {
+      return {
+        "status": 200,
+        "message": "Server Berjalan"
+      }
+    }
+  },
+  {
     method: 'POST',
     path: '/notes',
     handler: addNoteHandler,
@@ -32,5 +42,4 @@ const routes = [
     handler: deleteNoteByIdHandler,
   }
 ];
- 
 module.exports = routes;
